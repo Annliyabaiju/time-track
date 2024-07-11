@@ -22,13 +22,13 @@ export default function Page() {
   };
 
   return (
-    <main className="flex h-screen w-screen bg-white">
-      <div className="w-full sm:w-3/4 md:w-1/2 h-full flex items-center justify-center bg-white">
-        <div className="w-full max-w-lg text-center  bg-white rounded-lg">
-          <h2 className="font-switzer text-nowrap font-semibold text-center text-[#101010] mb-4 mt-6 text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:leading-[57.6px]">
+    <main className="flex h-screen  min-h-fit w-screen bg-white">
+      <div className="w-full  md:w-1/2 h-full flex items-center justify-center lg:p-0 p-5 bg-white">
+        <div className="w-full max-w-lg text-left  bg-white rounded-lg">
+          <h2 className="font-switzer text-nowrap font-semibold  text-[#101010] mb-4 mt-6 text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:leading-[57.6px]">
             Create Your Account
           </h2>
-          <p className="mb-8 text-center text-[#878787]">
+          <p className="mb-8 text-left text-[#878787]">
             Welcome to a smarter way of managing tasks and products. Our
             comprehensive suite is designed to streamline your workflow.
           </p>
@@ -166,13 +166,15 @@ export default function Page() {
           </p>
         </div>
       </div>
-      <div className="w-0 hidden sm:block sm:w-1/4 md:w-1/2 h-full">
+      <div className="w-0 hidden  md:block sm:w-1/4 md:w-1/2 h-full">
         <div className="relative w-full h-full">
           <Image
+          className="size-full"
             src="/image1.png"
             alt="Desktop View"
-            layout="fill"
-            objectFit="cover"
+            width={500}
+            height={500}
+            objectFit="contain"
           />
         </div>
       </div>
