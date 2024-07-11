@@ -25,7 +25,7 @@ export default function Page() {
     <main className="flex h-screen  min-h-fit w-screen bg-white">
       <div className="w-full  md:w-1/2 h-full flex items-center justify-center lg:p-0 p-5 bg-white">
         <div className="w-full max-w-lg text-left  bg-white rounded-lg">
-          <h2 className="font-switzer text-nowrap font-semibold  text-[#101010] mb-4 mt-6 text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:leading-[57.6px]">
+          <h2 className="font-switzer text-center sm:text-left text-nowrap font-semibold  text-[#101010] mb-4 mt-6 text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:leading-[57.6px]">
             Create Your Account
           </h2>
           <p className="mb-8 text-left text-[#878787]">
