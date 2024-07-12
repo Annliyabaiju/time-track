@@ -23,7 +23,7 @@ export default function Page() {
 
   return (
     <main className="flex h-screen  min-h-fit w-screen bg-white">
-      <div className="w-full  md:w-1/2 h-full flex items-center justify-center lg:p-0 p-5 bg-white">
+      <div className="w-full  md:w-1/2 h-full flex items-center justify-center p-5 sm:p-5 md:p-6  lg:p-7  bg-white">
         <div className="w-full max-w-lg text-left  bg-white rounded-lg">
           <h2 className="font-switzer text-center sm:text-left text-nowrap font-semibold  text-[#101010] mb-4 mt-6 text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:leading-[57.6px]">
             Create Your Account
@@ -68,6 +68,7 @@ export default function Page() {
             </span>
             <div className="flex-grow border-t border-gray-300"></div>
           </div>
+
 
           <form className="size-full max-w-screen-sm max-h-[700px]">
             <div className="mb-5 relative">
