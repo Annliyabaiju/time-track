@@ -90,7 +90,7 @@ export default function Page() {
                 <input
                   type={showEmail ? "text" : "email"}
                   id="email"
-                  className="w-full p-2 pl-8 pr-10 border border-gray-300 rounded-lg"
+                  className="w-full p-2   border border-gray-300 rounded-lg"
                   placeholder="Enter your email"
                 />
                 <div className="absolute inset-y-0 right-0 flex items-center pr-3">
@@ -113,7 +113,7 @@ export default function Page() {
                 <input
                   type={showPhoneNumber ? "text" : "tel"}
                   id="phoneNumber"
-                  className="w-full p-2 pl-8 pr-10 border border-gray-300 rounded-lg"
+                  className="w-full p-2  border border-gray-300 rounded-lg"
                   placeholder="eg. +1 123 345 6789"
                 />
                 <div className="absolute inset-y-0 right-0 flex items-center pr-3">
@@ -136,7 +136,7 @@ export default function Page() {
                 <input
                   type={showPassword ? "text" : "password"}
                   id="password"
-                  className="w-full p-2 pl-8 pr-10 border border-gray-300 rounded-lg"
+                  className="w-full p-2  border border-gray-300 rounded-lg"
                   placeholder="Enter your password"
                 />
                 <div className="absolute inset-y-0 right-0 flex items-center pr-3">
