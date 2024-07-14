@@ -90,10 +90,10 @@ const Page: React.FC = () => {
               Supercharge Your Workflow with Taskmanly
             </h3>
             <p className="font-switzer text-left text-[#878787]">
-              Welcome to the future of task management! At Taskmanly, we're
+              Welcome to the future of task management&#33; At Taskmanly&#44; we&#39;re
               dedicated to helping businesses like yours achieve peak efficiency
-              and collaboration. Take the leap towards a more organized
-              workflow.
+              and collaboration&#46; Take the leap towards a more organized
+              workflow&#46;
             </p>
             {card.map((item, index) => (
               <div
@@ -117,7 +117,7 @@ const Page: React.FC = () => {
         </div>
         <div className="p-4 md:p-6 shadow-lg rounded-2xl lg:w-1/2 md:w-3/5 size-full min-h-fit">
           <h2 className="text-xl md:text-2xl lg:3xl font-switzer font-semibold mb-4">
-            Fill out this quick form and we'll get back to you shortly
+            Fill out this quick form and we&#39;ll get back to you shortly
           </h2>
           <form className="mt-8 space-y-6">
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
