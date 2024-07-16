@@ -65,19 +65,19 @@ const Page: React.FC = () => {
       title: "Collaborate in Real-Time",
       description:
         "Break down silos and boost teamwork with instant collaboration on tasks and projects.",
-      icon: "PiLightningBold",
+      icon: PiLightningBold,
     },
     {
       title: "Smart Automation",
       description:
         "Work smarter, not harder - let intelligent automation handle the repetitive tasks for you.",
-      icon: "PiLightbulb",
+      icon: PiLightbulb,
     },
     {
       title: "Tailored Workflows",
       description:
         "Your business, your tasks. Customize Taskmanly to align seamlessly with your unique workflows.",
-      icon: "PiHandTap",
+      icon: PiHandTap,
     },
   ];
 
@@ -90,29 +90,33 @@ const Page: React.FC = () => {
               Supercharge Your Workflow with Taskmanly
             </h3>
             <p className="font-switzer text-left text-[#878787]">
-              Welcome to the future of task management&#33; At Taskmanly&#44; we&#39;re
-              dedicated to helping businesses like yours achieve peak efficiency
-              and collaboration&#46; Take the leap towards a more organized
-              workflow&#46;
+              Welcome to the future of task management&#33; At Taskmanly&#44;
+              we&#39;re dedicated to helping businesses like yours achieve peak
+              efficiency and collaboration&#46; Take the leap towards a more
+              organized workflow&#46;
             </p>
-            {card.map((item, index) => (
-              <div
-                className="flex lg:py-5 min-h-fit rounded-xl border"
-                key={index}
-              >
-                <div className="h-10 w-14 m-3 p-2 rounded-full bg-neutral-100 text-black">
-                  <PiLightningBold className="w-full h-full" />
+            {card.map((item, index) => {
+              const Icon = item.icon;
+              return (
+                <div
+                  className="flex lg:py-5 min-h-fit rounded-xl border"
+                  key={index}
+                >
+                  <div className="h-10 w-14 m-3 p-2 rounded-full bg-neutral-100 text-black">
+                    {/* <PiLightningBold className="w-full h-full" /> 	 */}
+                    <Icon />
+                  </div>
+                  <div className="p-2">
+                    <h4 className="font-switzer font-semibold text-[#101010] text-lg md:text-xl lg:text-2xl">
+                      {item.title}
+                    </h4>
+                    <p className="text-gray-500 mt-2 text-base font-switzer">
+                      {item.description}
+                    </p>
+                  </div>
                 </div>
-                <div className="p-2">
-                  <h4 className="font-switzer font-semibold text-[#101010] text-lg md:text-xl lg:text-2xl">
-                    {item.title}
-                  </h4>
-                  <p className="text-gray-500 mt-2 text-base font-switzer">
-                    {item.description}
-                  </p>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
         <div className="p-4 md:p-6 shadow-lg rounded-2xl lg:w-1/2 md:w-3/5 size-full min-h-fit">
@@ -168,7 +172,7 @@ const Page: React.FC = () => {
                   id="company-email"
                   autoComplete="email"
                   className="mt-3 block w-full rounded-xl border py-5 px-1 shadow-sm text-base font-switzer font-normal"
-                  placeholder="ex: robbi@taskmanly.com"
+                  placeholder="ex: robbi&#64;taskmanly&#46;com"
                 />
               </div>
               <div className="h-24">
@@ -237,7 +241,7 @@ const Page: React.FC = () => {
                 id="message"
                 rows={4}
                 className="mt-3 block w-full rounded-xl border py-5 px-1 shadow-sm text-base font-switzer font-normal"
-                placeholder="Hi, I'm interested in learning more about your services."
+                placeholder="Hi, I&#39;m interested in learning more about your services."
               />
             </div>
             <div className="flex items-center">
@@ -268,18 +272,18 @@ const Page: React.FC = () => {
         <h2 className="font-switzer text-center font-semibold text-[#101010] text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4">
           Frequently Asked Questions
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 auto-rows-auto gap-5 mt-10">
-          {faqItems.map((item, index) => (
-            <div key={index} className="w-full">
+        <div className="flex md:justify-evenly items-center h-screen flex-col gap-5 w-full md:flex-row">
+          <div className="flex flex-col items-start justify-start gap-5 w-full md:w-1/2 md:h-full ">
+            {faqItems.slice(0, 4).map((item, index) => (
               <div
-                className={`rounded-lg ${
+                className={`rounded-lg w-full ${
                   openIndex === index
                     ? "bg-black text-white"
                     : "bg-gray-100 text-black"
                 }`}
               >
                 <div
-                  className="flex justify-between items-center text-lg font-medium cursor-pointer p-3"
+                  className="flex justify-between items-center text-lg font-medium cursor-pointer p-3 w-full"
                   onClick={() => handleToggle(index)}
                 >
                   {item.question}
@@ -290,11 +294,41 @@ const Page: React.FC = () => {
                   )}
                 </div>
                 {openIndex === index && (
-                  <p className="mt-2 bg-white text-black p-3">{item.answer}</p>
+                  <p className="mt-2 bg-white text-black p-3 text-left w-full">
+                    {item.answer}
+                  </p>
                 )}
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+          <div className="flex flex-col items-start justify-start gap-5  w-full md:w-1/2 md:h-full">
+            {faqItems.slice(4, 8).map((item, index) => (
+              <div key={index + 4} className="w-full">
+                <div
+                  className={`rounded-lg ${
+                    openIndex === index + 4
+                      ? "bg-black text-white"
+                      : "bg-gray-100 text-black"
+                  }`}
+                >
+                  <div
+                    className="flex justify-between items-center text-lg font-medium cursor-pointer p-3"
+                    onClick={() => handleToggle(index + 4)}
+                  >
+                    {item.question}
+                    {openIndex === index + 4 ? (
+                      <PiCaretUp className="w-5 h-5 ml-2 text-white" />
+                    ) : (
+                      <PiCaretDown className="w-5 h-5 ml-2 text-black" />
+                    )}
+                  </div>
+                  {openIndex === index + 4 && (
+                    <p className="bg-white text-black p-3">{item.answer}</p>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </main>

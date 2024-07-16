@@ -173,8 +173,8 @@ export default function Page() {
           className="size-full"
             src="/image1.png"
             alt="Desktop View"
-            width={500}
-            height={500}
+            width={2000}
+            height={2000}
             objectFit="contain"
           />
         </div>
