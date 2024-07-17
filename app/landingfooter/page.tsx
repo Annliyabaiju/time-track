@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-const Footer = () => {
+const Landingfooter = () => {
   const solutions = [
     'Project Management',
     'Increase Productivity',
@@ -198,4 +198,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default Landingfooter;

@@ -103,7 +103,6 @@ const Page: React.FC = () => {
                   key={index}
                 >
                   <div className="h-10 w-14 m-3 p-2 rounded-full bg-neutral-100 text-black">
-                    {/* <PiLightningBold className="w-full h-full" /> 	 */}
                     <Icon />
                   </div>
                   <div className="p-2">
@@ -273,14 +272,13 @@ const Page: React.FC = () => {
           Frequently Asked Questions
         </h2>
         <div className="flex md:justify-evenly items-center h-screen flex-col gap-5 w-full md:flex-row">
-          <div className="flex flex-col items-start justify-start gap-5 w-full md:w-1/2 md:h-full ">
+          <div className="flex flex-col items-start justify-start gap-5 w-full md:w-1/2 md:h-full">
             {faqItems.slice(0, 4).map((item, index) => (
               <div
                 className={`rounded-lg w-full ${
-                  openIndex === index
-                    ? "bg-black text-white"
-                    : "bg-gray-100 text-black"
+                  openIndex === index ? "bg-black text-white" : "bg-gray-100 text-black"
                 }`}
+                key={index}
               >
                 <div
                   className="flex justify-between items-center text-lg font-medium cursor-pointer p-3 w-full"
@@ -301,31 +299,28 @@ const Page: React.FC = () => {
               </div>
             ))}
           </div>
-          <div className="flex flex-col items-start justify-start gap-5  w-full md:w-1/2 md:h-full">
+          <div className="flex flex-col items-start justify-start gap-5 w-full md:w-1/2 md:h-full">
             {faqItems.slice(4, 8).map((item, index) => (
-              <div key={index + 4} className="w-full">
+              <div
+                className={`rounded-lg w-full ${
+                  openIndex === index + 4 ? "bg-black text-white" : "bg-gray-100 text-black"
+                }`}
+                key={index + 4}
+              >
                 <div
-                  className={`rounded-lg ${
-                    openIndex === index + 4
-                      ? "bg-black text-white"
-                      : "bg-gray-100 text-black"
-                  }`}
+                  className="flex justify-between items-center text-lg font-medium cursor-pointer p-3 w-full"
+                  onClick={() => handleToggle(index + 4)}
                 >
-                  <div
-                    className="flex justify-between items-center text-lg font-medium cursor-pointer p-3"
-                    onClick={() => handleToggle(index + 4)}
-                  >
-                    {item.question}
-                    {openIndex === index + 4 ? (
-                      <PiCaretUp className="w-5 h-5 ml-2 text-white" />
-                    ) : (
-                      <PiCaretDown className="w-5 h-5 ml-2 text-black" />
-                    )}
-                  </div>
-                  {openIndex === index + 4 && (
-                    <p className="bg-white text-black p-3">{item.answer}</p>
+                  {item.question}
+                  {openIndex === index + 4 ? (
+                    <PiCaretUp className="w-5 h-5 ml-2 text-white" />
+                  ) : (
+                    <PiCaretDown className="w-5 h-5 ml-2 text-black" />
                   )}
                 </div>
+                {openIndex === index + 4 && (
+                  <p className="bg-white text-black p-3">{item.answer}</p>
+                )}
               </div>
             ))}
           </div>
